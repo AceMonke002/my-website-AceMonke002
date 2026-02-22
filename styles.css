@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #121212; /* midnight gray */
+    color: #e6e6e6;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: linear-gradient(
+        180deg,
+        #1a1a1a,
+        #121212
+    );
+}
+
+.tagline {
+    color: #b3b3b3;
+    margin-top: 0.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #181818;
+    padding: 1rem;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: #b11226; /* deep red accent */
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+main {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3 {
+    color: #f0f0f0;
+}
+
+h2 {
+    border-left: 4px solid #b11226;
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #1b1b1b;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(177, 18, 38, 0.25);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #2a2a2a;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.6rem 1.4rem;
+    background-color: #b11226;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.button:hover {
+    background-color: #8f0f1f;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #9a9a9a;
+    border-top: 1px solid #2a2a2a;
+}
